@@ -12,10 +12,12 @@ class CartViewController: UIViewController {
 
     @IBOutlet weak var cartListView: UITableView!
     
+    @IBOutlet weak var checkoutBtn: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
         
         cartListView.register(UINib(nibName: "BeerCartCell", bundle: nil), forCellReuseIdentifier: "BeerCartCell")
+        checkoutBtn.layer.giveShadowToTableViewCell(layer: checkoutBtn.layer, Bounds: checkoutBtn.bounds, cornerRadius: 10.0)
 
     }
 }

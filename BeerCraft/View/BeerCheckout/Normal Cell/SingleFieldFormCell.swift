@@ -19,8 +19,8 @@ class SingleFieldFormCell: UITableViewCell {
         didSet{
             if formData.count>0{
                 lblName.text = formData[0]
-                nameTf.placeholder = formData[0]
-                nameTf.addLine(color: .black, width: 0.3)
+//                nameTf.placeholder = formData[0]
+                nameTf.addLine(color: .white, width: 0.3)
             }
         }
     }

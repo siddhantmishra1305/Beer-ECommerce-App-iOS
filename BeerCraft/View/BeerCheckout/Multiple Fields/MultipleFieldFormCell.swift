@@ -26,14 +26,18 @@ class MultipleFieldFormCell: UITableViewCell {
                 
                 if data.count>0{
                     lbl1.text = data[0]
-                    tf1.placeholder = data[0]
-                    tf1.addLine(color: .black, width: 0.3)
+//                    tf1.attributedPlaceholder = NSAttributedString(
+//                                                    string: data[0],
+//                                                    attributes: [NSAttributedString.Key.foregroundColor: UIColor.white])
+                    tf1.addLine(color: .white, width: 0.3)
                 }
                 
                 if data.count>1{
                     lbl2.text = data[1]
-                    tf2.placeholder = data[1]
-                    tf2.addLine(color: .black, width: 0.3)
+//                    tf2.attributedPlaceholder = NSAttributedString(
+//                                                    string: data[1],
+//                                                    attributes: [NSAttributedString.Key.foregroundColor: UIColor.white])
+                    tf2.addLine(color: .white, width: 0.3)
                 }
             }
         }

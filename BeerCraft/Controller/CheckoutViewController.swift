@@ -12,6 +12,8 @@ class CheckoutViewController: UIViewController {
 
     var formArr = [[String]]()
     
+    @IBOutlet weak var addNewAddress: UIButton!
+    
     @IBOutlet weak var checkoutAddressFormListView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,6 +22,8 @@ class CheckoutViewController: UIViewController {
         
         checkoutAddressFormListView.register(UINib(nibName: "SingleFieldFormCell", bundle: nil), forCellReuseIdentifier: "SingleFieldFormCell")
         
+        addNewAddress.layer.giveShadowToTableViewCell(layer: addNewAddress.layer, Bounds: addNewAddress.bounds, cornerRadius: 10.0)
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -27,13 +31,19 @@ class CheckoutViewController: UIViewController {
         var personalDetailArr = [String]()
         var deliveryArr = [String]()
         
-        personalDetailArr.append("First Name")
-        personalDetailArr.append("Mobile|Last Name")
+        personalDetailArr.append("First Name|Last Name")
+        personalDetailArr.append("Mobile")
         
         deliveryArr.append("House No|Apartment")
         deliveryArr.append("Street details")
-        deliveryArr.append("Area")
-        deliveryArr.append("City|Pincode")
+        deliveryArr.append("City|Area")
+        deliveryArr.append("Pincode")
+         deliveryArr.append("House No|Apartment")
+         deliveryArr.append("Pincode")
+         deliveryArr.append("1|2")
+        
+        
+        
         
         formArr.append(personalDetailArr)
         formArr.append(deliveryArr)
@@ -43,7 +53,7 @@ class CheckoutViewController: UIViewController {
 
 extension CheckoutViewController : UITableViewDelegate, UITableViewDataSource{
     
-    func numberOfSections(in tableView: UITableView) -> Int {
+     func numberOfSections(in tableView: UITableView) -> Int {
         return formArr.count
     }
     
@@ -52,17 +62,15 @@ extension CheckoutViewController : UITableViewDelegate, UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-      
+        
+        let label = UILabel()
+        label.font = UIFont(name: "HelveticaNeue-Medium", size: 15.0)
+        label.textColor = #colorLiteral(red: 0.9176470588, green: 0.6745098039, blue: 0.1843137255, alpha: 1)
+        
         if section == 0 {
-            let label = UILabel()
-            label.font = UIFont(name: "HelveticaNeue-Medium", size: 15.0)
-            label.textColor = .black
             label.text = "Personal Details"
             return label
         } else{
-            let label = UILabel()
-            label.font = UIFont(name: "HelveticaNeue-Medium", size: 15.0)
-            label.textColor = .black
             label.text = "Address Details"
             return label
         }

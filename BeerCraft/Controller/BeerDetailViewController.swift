@@ -23,9 +23,10 @@ class BeerDetailViewController: UIViewController {
         super.viewDidLoad()
         
         let customView = BeerDetailView().loadNib() as! BeerDetailView
+        customView.backgroundColor = UIColor.red
+//         customView.frame = CGRect(x: 0, y: 0, width: detailView.frame.width, height: detailView.frame.height)
         customView.beerData = beerDetail
         detailView.addSubview(customView)
-    
         setupViews()
     }
     
@@ -57,6 +58,7 @@ class BeerDetailViewController: UIViewController {
         
         if let name = beerDetail?.name{
             let cartItem = Global.sharedInstance.cart.filter { ($0.name?.contains(name))!}
+           
             if cartItem.count>0{
                 let index = Global.sharedInstance.cart.firstIndex { (item1) -> Bool in
                     item1.name == name
@@ -86,6 +88,7 @@ class BeerDetailViewController: UIViewController {
                 }
             }
              Global.sharedInstance.cart.append(item!)
+             self.showAlertWithForSucess("Success", message: "Beers added succesfully")
         }
     }
 }

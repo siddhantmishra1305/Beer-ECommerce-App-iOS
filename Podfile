@@ -8,7 +8,8 @@ target 'BeerCraft' do
   # Pods for BeerCraft
 
 	pod 'AlamofireObjectMapper', '~> 5.2'
-	pod 'IQKeyboardManagerSwift'	
+	pod 'IQKeyboardManagerSwift'
+	pod 'FCAlertView'	
 
 
   target 'BeerCraftTests' do

@@ -90,23 +90,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BeerCraft/Controller/CartViewController.swift"
-            timestampString = "586450841.005865"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "70"
-            endingLineNumber = "70"
-            landmarkName = "bookbtn1(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "BeerCraft/Controller/CartViewController.swift"
-            timestampString = "586450841.00611"
+            timestampString = "586689871.42024"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "72"
@@ -122,11 +106,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BeerCraft/Controller/CartViewController.swift"
-            timestampString = "586450841.006178"
+            timestampString = "586689871.420331"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "67"
-            endingLineNumber = "67"
+            startingLineNumber = "74"
+            endingLineNumber = "74"
             landmarkName = "bookbtn1(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -138,39 +122,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BeerCraft/Controller/CartViewController.swift"
-            timestampString = "586450841.006237"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "91"
-            endingLineNumber = "91"
-            landmarkName = "bookBtn2(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "BeerCraft/Controller/CartViewController.swift"
-            timestampString = "586450841.006291"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "71"
-            endingLineNumber = "71"
-            landmarkName = "bookbtn1(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "BeerCraft/Controller/CartViewController.swift"
-            timestampString = "586450841.006339"
+            timestampString = "586689871.420413"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "69"
@@ -182,15 +134,63 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BeerCraft/Controller/CartViewController.swift"
+            timestampString = "586689871.420483"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "93"
+            endingLineNumber = "93"
+            landmarkName = "bookBtn2(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BeerCraft/Controller/CartViewController.swift"
+            timestampString = "586689871.42053"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "73"
+            endingLineNumber = "73"
+            landmarkName = "bookbtn1(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BeerCraft/Controller/CartViewController.swift"
+            timestampString = "586689871.420575"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "71"
+            endingLineNumber = "71"
+            landmarkName = "bookbtn1(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BeerCraft/Controller/CartViewController.swift"
-            timestampString = "586450841.0063879"
+            timestampString = "586689871.420619"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "80"
-            endingLineNumber = "80"
+            startingLineNumber = "82"
+            endingLineNumber = "82"
             landmarkName = "bookbtn1(_:)"
             landmarkType = "7">
             <Locations>
@@ -201,8 +201,8 @@
                   symbolName = "BeerCraft.CartViewController.bookbtn1(__C.UIButton) -&gt; ()"
                   moduleName = "BeerCraft"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/siddhantmishra/Documents/Xcode%20Projects/BeerCraft/BeerCraft/Controller/CartViewController.swift"
-                  timestampString = "586450841.150004"
+                  urlString = "file:///Users/siddhantmishra/Documents/Github/beerCraft/BeerCraft/Controller/CartViewController.swift"
+                  timestampString = "586684834.650207"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "80"
@@ -216,8 +216,8 @@
                   symbolName = "BeerCraft.CartViewController.bookbtn1(__C.UIButton) -&gt; ()"
                   moduleName = "BeerCraft"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/siddhantmishra/Documents/Xcode%20Projects/BeerCraft/BeerCraft/Controller/CartViewController.swift"
-                  timestampString = "586450841.1535619"
+                  urlString = "file:///Users/siddhantmishra/Documents/Github/beerCraft/BeerCraft/Controller/CartViewController.swift"
+                  timestampString = "586684834.65618"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "80"
@@ -234,11 +234,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BeerCraft/Controller/CheckoutViewController.swift"
-            timestampString = "586450841.006439"
+            timestampString = "586689871.420669"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "79"
-            endingLineNumber = "79"
+            startingLineNumber = "87"
+            endingLineNumber = "87"
             landmarkName = "tableView(_:cellForRowAt:)"
             landmarkType = "7">
          </BreakpointContent>
