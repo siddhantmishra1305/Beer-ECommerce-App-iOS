@@ -28,8 +28,8 @@ class MultipleFieldFormCell: UITableViewCell {
                     lbl1.text = data[0]
 //                    tf1.attributedPlaceholder = NSAttributedString(
 //                                                    string: data[0],
-//                                                    attributes: [NSAttributedString.Key.foregroundColor: UIColor.white])
-                    tf1.addLine(color: .white, width: 0.3)
+//                                                    attributes: [NSAttributedString.Key.foregroundColor: UIColor.init(red: <#T##CGFloat#>, green: <#T##CGFloat#>, blue: <#T##CGFloat#>, alpha: <#T##CGFloat#>)])
+                    tf1.addLine(color: #colorLiteral(red: 0.9176470588, green: 0.6745098039, blue: 0.1843137255, alpha: 1), width: 0.3)
                 }
                 
                 if data.count>1{
@@ -37,7 +37,7 @@ class MultipleFieldFormCell: UITableViewCell {
 //                    tf2.attributedPlaceholder = NSAttributedString(
 //                                                    string: data[1],
 //                                                    attributes: [NSAttributedString.Key.foregroundColor: UIColor.white])
-                    tf2.addLine(color: .white, width: 0.3)
+                    tf2.addLine(color: #colorLiteral(red: 0.9176470588, green: 0.6745098039, blue: 0.1843137255, alpha: 1), width: 0.3)
                 }
             }
         }

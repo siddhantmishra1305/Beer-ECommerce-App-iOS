@@ -13,6 +13,7 @@ class CartViewController: UIViewController {
     @IBOutlet weak var cartListView: UITableView!
     
     @IBOutlet weak var checkoutBtn: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         

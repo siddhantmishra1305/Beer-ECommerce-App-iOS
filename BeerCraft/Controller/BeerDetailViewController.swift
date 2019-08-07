@@ -23,11 +23,18 @@ class BeerDetailViewController: UIViewController {
         super.viewDidLoad()
         
         let customView = BeerDetailView().loadNib() as! BeerDetailView
-        customView.backgroundColor = UIColor.red
-//         customView.frame = CGRect(x: 0, y: 0, width: detailView.frame.width, height: detailView.frame.height)
+        customView.frame = CGRect(x: 0, y: 0, width: detailView.frame.width, height: detailView.frame.height)
         customView.beerData = beerDetail
-        detailView.addSubview(customView)
+        self.detailView.addSubview(customView)
+        self.detailView.backgroundColor = UIColor.red
+        print(self.detailView.frame)
         setupViews()
+        if let name = beerDetail?.name{
+            let cartItem = Global.sharedInstance.cart.filter { ($0.name?.contains(name))!}
+            if cartItem.count>0{
+                itemCounterLBL.text = cartItem[0].qty
+            }
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {

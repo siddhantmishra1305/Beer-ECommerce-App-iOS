@@ -15,6 +15,7 @@ class CheckoutViewController: UIViewController {
     @IBOutlet weak var addNewAddress: UIButton!
     
     @IBOutlet weak var checkoutAddressFormListView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -22,7 +23,7 @@ class CheckoutViewController: UIViewController {
         
         checkoutAddressFormListView.register(UINib(nibName: "SingleFieldFormCell", bundle: nil), forCellReuseIdentifier: "SingleFieldFormCell")
         
-        addNewAddress.layer.giveShadowToTableViewCell(layer: addNewAddress.layer, Bounds: addNewAddress.bounds, cornerRadius: 10.0)
+//        addNewAddress.layer.giveShadowToTableViewCell(layer: addNewAddress.layer, Bounds: addNewAddress.bounds, cornerRadius: 10.0)
         
     }
     
@@ -38,12 +39,6 @@ class CheckoutViewController: UIViewController {
         deliveryArr.append("Street details")
         deliveryArr.append("City|Area")
         deliveryArr.append("Pincode")
-         deliveryArr.append("House No|Apartment")
-         deliveryArr.append("Pincode")
-         deliveryArr.append("1|2")
-        
-        
-        
         
         formArr.append(personalDetailArr)
         formArr.append(deliveryArr)

@@ -19,35 +19,67 @@
                 <rect key="frame" x="0.0" y="0.0" width="374" height="64.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="LabelName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z21-QU-871">
-                        <rect key="frame" x="15" y="8" width="115" height="15"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="14"/>
-                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <nil key="highlightedColor"/>
-                    </label>
-                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uJl-rB-m6k">
-                        <rect key="frame" x="16" y="27" width="145" height="20"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="15"/>
-                        <textInputTraits key="textInputTraits"/>
-                    </textField>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="LabelName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FNh-va-VB4">
-                        <rect key="frame" x="221" y="8" width="115" height="15"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="14"/>
-                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <nil key="highlightedColor"/>
-                    </label>
-                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Kcc-C3-ERf">
-                        <rect key="frame" x="222" y="27" width="145" height="20"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="15"/>
-                        <textInputTraits key="textInputTraits"/>
-                    </textField>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tvd-Ls-yp0">
+                        <rect key="frame" x="201" y="13" width="155" height="39"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LabelName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FNh-va-VB4">
+                                <rect key="frame" x="0.0" y="0.0" width="140" height="17"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="14"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Kcc-C3-ERf">
+                                <rect key="frame" x="0.0" y="21" width="155" height="18"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="15"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="FNh-va-VB4" firstAttribute="leading" secondItem="Tvd-Ls-yp0" secondAttribute="leading" id="EBW-Ui-sBv"/>
+                            <constraint firstItem="FNh-va-VB4" firstAttribute="top" secondItem="Tvd-Ls-yp0" secondAttribute="top" id="Err-jW-MBr"/>
+                            <constraint firstAttribute="trailing" secondItem="Kcc-C3-ERf" secondAttribute="trailing" id="U4W-8W-7kG"/>
+                            <constraint firstItem="Kcc-C3-ERf" firstAttribute="leading" secondItem="Tvd-Ls-yp0" secondAttribute="leading" id="VLe-UE-sqp"/>
+                            <constraint firstAttribute="trailing" secondItem="FNh-va-VB4" secondAttribute="trailing" constant="15" id="W9f-Dr-YYB"/>
+                            <constraint firstAttribute="bottom" secondItem="Kcc-C3-ERf" secondAttribute="bottom" id="bGO-vR-GIh"/>
+                            <constraint firstItem="Kcc-C3-ERf" firstAttribute="top" secondItem="FNh-va-VB4" secondAttribute="bottom" constant="4" id="nXB-Bl-1D7"/>
+                        </constraints>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7s4-dz-NJ6">
+                        <rect key="frame" x="15" y="13" width="146" height="39"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LabelName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z21-QU-871">
+                                <rect key="frame" x="0.0" y="0.0" width="69" height="17"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="14"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uJl-rB-m6k">
+                                <rect key="frame" x="1" y="21" width="145" height="18"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="15"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="uJl-rB-m6k" secondAttribute="bottom" id="8gY-wB-7Op"/>
+                            <constraint firstAttribute="trailing" secondItem="Z21-QU-871" secondAttribute="trailing" constant="77" id="DSf-jK-x0e"/>
+                            <constraint firstItem="uJl-rB-m6k" firstAttribute="leading" secondItem="7s4-dz-NJ6" secondAttribute="leading" constant="1" id="HJc-y8-L3T"/>
+                            <constraint firstAttribute="trailing" secondItem="uJl-rB-m6k" secondAttribute="trailing" id="QUr-vW-kg5"/>
+                            <constraint firstItem="Z21-QU-871" firstAttribute="leading" secondItem="7s4-dz-NJ6" secondAttribute="leading" id="Wnn-of-A4G"/>
+                            <constraint firstItem="Z21-QU-871" firstAttribute="top" secondItem="7s4-dz-NJ6" secondAttribute="top" id="gXl-N8-ABb"/>
+                            <constraint firstItem="uJl-rB-m6k" firstAttribute="top" secondItem="Z21-QU-871" secondAttribute="bottom" constant="4" id="hf5-un-Xs6"/>
+                        </constraints>
+                    </view>
                 </subviews>
+                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="7s4-dz-NJ6" secondAttribute="bottom" constant="12.5" id="0Ix-Ut-bcP"/>
+                    <constraint firstAttribute="bottom" secondItem="Tvd-Ls-yp0" secondAttribute="bottom" constant="12.5" id="4BQ-hK-Z2F"/>
+                    <constraint firstItem="Tvd-Ls-yp0" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="13" id="A76-M5-5nG"/>
+                    <constraint firstItem="7s4-dz-NJ6" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="PFt-fT-9gf"/>
+                    <constraint firstItem="Tvd-Ls-yp0" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="201" id="SFl-mS-Jl6"/>
+                    <constraint firstItem="7s4-dz-NJ6" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="13" id="k0m-Ci-O3a"/>
+                    <constraint firstAttribute="trailing" secondItem="Tvd-Ls-yp0" secondAttribute="trailing" constant="18" id="ppA-rp-3hx"/>
+                </constraints>
             </tableViewCellContentView>
             <color key="backgroundColor" red="0.17254901960784313" green="0.1803921568627451" blue="0.18431372549019609" alpha="1" colorSpace="calibratedRGB"/>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
