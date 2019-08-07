@@ -25,4 +25,4 @@ An iOS application to buy beer online.
 <h3>Libraries used </h3>
 1.Alamofire Object mapper</br>
 2.FCAlertView</br>
-3.IQIQKeyboardManagerSwift</br>
+3.IQKeyboardManagerSwift</br>
