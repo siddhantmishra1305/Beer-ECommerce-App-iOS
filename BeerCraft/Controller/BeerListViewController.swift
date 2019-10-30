@@ -7,6 +7,9 @@
 //
 
 import UIKit
+import os.log
+import IntentKit
+import IntentsUI
 
 class BeerListViewController: UIViewController {
     
@@ -30,7 +33,50 @@ class BeerListViewController: UIViewController {
         filterOn = false
         beerListView.register(UINib(nibName: "BeerListViewCellTableViewCell", bundle: nil), forCellReuseIdentifier: "BeerListViewCellTableViewCell")
         setupNavigationBar()
+        INInteraction.delete(with: "Take my order") { err in
+            print(err?.localizedDescription)
+        }
+        self.addTakeOrderSiri()
         
+//        self.getMeBeer()
+    }
+    
+    func addSelectBeerSiriIntent(){
+       let intent = SelectBeerIntent()
+        intent.suggestedInvocationPhrase = "Take my order"
+        intent.beerName = "beerName"
+        intent.amount = 0
+       let interaction = INInteraction(intent: intent, response: nil)
+       
+       interaction.donate { (error) in
+           if error != nil {
+               if let error = error as NSError? {
+                   print("Interaction donation failed: \(error.description)")
+               } else {
+                   print("Successfully donated interaction")
+               }
+           }
+       }
+    }
+    
+    func addTakeOrderSiri(){
+        let intent = SelectBeerIntent()
+        intent.beerName = "beerName"
+        intent.amount = 0
+        guard let shortcut = INShortcut(intent: intent) else {
+            return
+        }
+        let viewController = INUIAddVoiceShortcutViewController(shortcut: shortcut)
+        viewController.delegate = self
+        present(viewController, animated: true, completion: nil)
+    }
+    
+    func getMeBeer() {
+        let activity = NSUserActivity.orderBeerActivity
+        let shortcut = INShortcut(userActivity: activity)
+        let viewController = INUIAddVoiceShortcutViewController(shortcut: shortcut)
+        viewController.delegate = self
+        present(viewController,animated: true,completion: nil)
     }
     
     
@@ -61,26 +107,28 @@ class BeerListViewController: UIViewController {
     }
     
     @objc func navigateToFilterScreen(){
-        if filterOn{
-            filterOn = false
-            filterArr.removeAll()
-            beerSearchBar.text=""
-            beerData = beerArrRef
-            beerListView.reloadData()
-            setupNavigationBar()
-        } else{
-            for item in beerData{
-                if let style = item.style{
-                    filterArr.append(style)
-                }
-            }
-            filterArr = Array(Set(filterArr))
-            self .performSegue(withIdentifier: "showFilters", sender: self)
-        }
+//        if filterOn{
+//            filterOn = false
+//            filterArr.removeAll()
+//            beerSearchBar.text=""
+//            beerData = beerArrRef
+//            beerListView.reloadData()
+//            setupNavigationBar()
+//        } else{
+//            for item in beerData{
+//                if let style = item.style{
+//                    filterArr.append(style)
+//                }
+//            }
+//            filterArr = Array(Set(filterArr))
+//            self .performSegue(withIdentifier: "showFilters", sender: self)
+//        }
+        
+        self.getMeBeer()
     }
     
     // API :getBeerDetails
-    func fetchAllBeers(){
+    open func fetchAllBeers(){
         vSpinner = showSpinner(onView: self.view)
         ServerManager.sharedInstance.getAllBeers() { [unowned self](details, error) in
             
@@ -239,3 +287,64 @@ extension BeerListViewController{
     }
 }
 
+
+extension BeerListViewController{
+
+    override func restoreUserActivityState(_ activity: NSUserActivity) {
+        os_log("TK421: %{public}s", "\(#function)")
+        super.restoreUserActivityState(activity)
+        
+        if activity.activityType == NSUserActivity.orderBeerActivityType {
+            print("Done")
+        }
+    }
+    
+}
+
+extension BeerListViewController: INUIAddVoiceShortcutButtonDelegate {
+    
+    func present(_ addVoiceShortcutViewController: INUIAddVoiceShortcutViewController, for addVoiceShortcutButton: INUIAddVoiceShortcutButton) {
+        addVoiceShortcutViewController.delegate = self
+        present(addVoiceShortcutViewController, animated: true, completion: nil)
+    }
+    
+    func present(_ editVoiceShortcutViewController: INUIEditVoiceShortcutViewController, for addVoiceShortcutButton: INUIAddVoiceShortcutButton) {
+        editVoiceShortcutViewController.delegate = self
+        present(editVoiceShortcutViewController, animated: true, completion: nil)
+    }
+}
+
+extension BeerListViewController: INUIAddVoiceShortcutViewControllerDelegate {
+    func addVoiceShortcutViewController(_ controller: INUIAddVoiceShortcutViewController, didFinishWith voiceShortcut: INVoiceShortcut?, error: Error?) {
+        if let error = error as NSError? {
+            os_log("Error adding voice shortcut: %@", log: OSLog.default, type: .error, error)
+        }
+        dismiss(animated: true, completion: nil)
+    }
+    
+    func addVoiceShortcutViewControllerDidCancel(_ controller: INUIAddVoiceShortcutViewController) {
+        dismiss(animated: true, completion: nil)
+    }
+}
+
+extension BeerListViewController: INUIEditVoiceShortcutViewControllerDelegate {
+    
+    func editVoiceShortcutViewController(_ controller: INUIEditVoiceShortcutViewController,
+                                         didUpdate voiceShortcut: INVoiceShortcut?,
+                                         error: Error?) {
+        if let error = error as NSError? {
+            os_log("Error adding voice shortcut: %@", log: OSLog.default, type: .error, error)
+        }
+        
+        controller.dismiss(animated: true, completion: nil)
+    }
+    
+    func editVoiceShortcutViewController(_ controller: INUIEditVoiceShortcutViewController,
+                                         didDeleteVoiceShortcutWithIdentifier deletedVoiceShortcutIdentifier: UUID) {
+        controller.dismiss(animated: true, completion: nil)
+    }
+    
+    func editVoiceShortcutViewControllerDidCancel(_ controller: INUIEditVoiceShortcutViewController) {
+        controller.dismiss(animated: true, completion: nil)
+    }
+}

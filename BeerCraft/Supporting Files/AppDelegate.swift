@@ -7,7 +7,10 @@
 //
 
 import UIKit
+import IntentKit
+import Intents
 import IQKeyboardManagerSwift
+import os.log
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -42,6 +45,25 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 
+    func application(_ application: UIApplication, continue userActivity: NSUserActivity, restorationHandler: @escaping ([UIUserActivityRestoring]?) -> Void) -> Bool {
+
+        os_log("TK421: Continue type = %{public}s", userActivity.activityType)
+        guard userActivity.activityType == NSUserActivity.orderBeerActivityType else{
+            os_log("TK421: Can't continue unknown NSUserActivity type = %{public}s", userActivity.activityType)
+            return false
+        }
+        
+        
+        guard let window = window,
+            let rootViewController = window.rootViewController as? UINavigationController else {
+                os_log("TK421: Failed to access root view controller.")
+                return false
+        }
+        
+        restorationHandler(rootViewController.viewControllers)
+        
+        return true
+    }
 
 }
 

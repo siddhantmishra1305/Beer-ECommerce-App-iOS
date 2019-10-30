@@ -26,8 +26,6 @@ class BeerDetailViewController: UIViewController {
         customView.frame = CGRect(x: 0, y: 0, width: detailView.frame.width, height: detailView.frame.height)
         customView.beerData = beerDetail
         self.detailView.addSubview(customView)
-        self.detailView.backgroundColor = UIColor.red
-        print(self.detailView.frame)
         setupViews()
         if let name = beerDetail?.name{
             let cartItem = Global.sharedInstance.cart.filter { ($0.name?.contains(name))!}
