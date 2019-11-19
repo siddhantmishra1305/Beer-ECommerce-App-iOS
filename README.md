@@ -18,6 +18,9 @@ An iOS application to buy beer online.
 5. Multi level filters and search</br> 
 ![](MultilevelFilters.gif)</br>
 
+6. SiriKit Integration</br>
+![](sirikit.gif)</br>
+
 <h3>TODO:</h3>
 1.Payment Gateway Integration</br>
 2.Google maps integration in address screen </br>
